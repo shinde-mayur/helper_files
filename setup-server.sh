@@ -23,8 +23,6 @@ echo "SDK tools copied to $android_home"
 
 # Configures sdk to be used anywhere
 echo "Configuring SDK..."
-echo -e "\n\n# Android sdk config\n\nexport ANDROID_HOME=$android_home \nexport PATH=$PATH:$ANDROID_HOME/tools/bin \nexport PATH=$PATH:$ANDROID_HOME/platform-tools" >> $HOME/.bashrc
-source $HOME/.bashrc
 sudo ln -s $android_home/tools/bin/sdkmanager /usr/bin/sdkmanager
 sdkmanager --sdk_root=$android_home --version
 echo "SDK configured."
